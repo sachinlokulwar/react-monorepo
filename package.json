@@ -1,0 +1,14 @@
+{
+  "name": "mymonorepo",  
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "taher <taher@entropia.com>",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+        "packages/*"
+    ],
+    "nohoist": ["*/react-native","**/react-native/**"]
+},
+"private":true
+}
