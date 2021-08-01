@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import logo from './logo.svg';
@@ -8,7 +8,8 @@ import {getWelcomeString} from 'common/src/main';
 
 import {selectUsers, fetchUsers, addUsers} from 'common/src/users/usersSlice';  
 import UserList from './features/users/userList';
-import { Button } from '@material-ui/core';
+import AddUser from './features/users/addUser';
+import { Button  } from '@material-ui/core';
 
 function App() {
   const dispatch = useDispatch();
@@ -18,14 +19,24 @@ function App() {
     dispatch(fetchUsers());
   }, []);
 
-  // useEffect(() => {
-  //   console.log(users.users);
-  // })
-
+  const [open, setOpen] = useState(false);
   const   addUser = () => {
     console.log('addUser');
-    dispatch(addUsers());
+    setOpen(true);
   }
+
+  const handleClose = () => {
+    setOpen(false);
+  }
+  
+  const saveUserData = (data) => {
+    handleClose();
+    dispatch(addUsers(data));
+  }
+
+  // const handleDeleteClick = (id) => {
+  //   dispatch(deleteUser(id));
+  // }
 
   return (
     <div className="App">
@@ -38,7 +49,10 @@ function App() {
         </div>
         
       </div>
-      <UserList users={users.users} />
+      <UserList users={users.users}/>
+      {open &&
+        <AddUser open={open} handleClose={handleClose} saveUserData={saveUserData}/>
+      }
     </div>
   );
 }

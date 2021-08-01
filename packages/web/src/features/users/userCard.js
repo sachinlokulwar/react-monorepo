@@ -39,9 +39,9 @@ export default function UserCard({user}) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="secondary">
+        {/* <Button size="small" color="secondary" onClick={() => handleDeleteClick(user.id)}>
           Delete
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
   );

@@ -21,6 +21,16 @@
   line-height: 72px;
 }
 
+.text-field {
+  width: 100%;
+  margin: 10px 0 !important;
+}
+
+.submit-btn {
+  margin-top: 40px;
+  float: right;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-float infinite 3s ease-in-out;

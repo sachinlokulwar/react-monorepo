@@ -5,11 +5,7 @@ export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
   return (await response.json()).data;
 });
 
-export const addUsers = createAsyncThunk('users/addUsers', async () => {
-  const data = {
-    name: 'test',
-    job: 'leader'
-  }
+export const addUsers = createAsyncThunk('users/addUsers', async (data) => {
   console.log(data);
   const response = await fetch('https://reqres.in/api/users', {
     method: 'POST',
@@ -20,6 +16,14 @@ export const addUsers = createAsyncThunk('users/addUsers', async () => {
   });
   return (await response.json());
 });
+
+// export const deleteUser = createAsyncThunk('users/deleteUser', async (id) => {
+//   console.log(id);
+//   const response = await fetch('https://reqres.in/api/users/' + id, {
+//     method: 'DELETE',
+//   });
+//   return (await response.json());
+// });
 
 export const selectUsers = (state) => state.users;
 

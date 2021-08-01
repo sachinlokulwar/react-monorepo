@@ -19,7 +19,7 @@ export default function UserList({users}) {
         {users && users.map(user => {
             return (
                 <Grid item xs={3}>
-                    <UserCard user={user} />
+                    <UserCard user={user}/>
                 </Grid>
             )
         })}
