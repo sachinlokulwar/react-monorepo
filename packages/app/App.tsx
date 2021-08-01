@@ -12,8 +12,6 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.container}>
         <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.sectionDescription}>{getWelcomeString("World")}</Text>
-          <Message />
           <Home />
         </ScrollView>
       </SafeAreaView>
@@ -25,8 +23,7 @@ export default App;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    marginHorizontal: 10
+    flex: 1
   },
   sectionDescription: {
     marginTop: 8,
