@@ -34,4 +34,10 @@
       "last 1 safari version"
     ]
   }
+  ,
+  "workspaces": {
+    "nohoist": [
+      "**"
+    ]
+  }
 }

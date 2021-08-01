@@ -8,7 +8,7 @@
     "packages": [
         "packages/*"
     ],
-    "nohoist": ["*/react-native","**/react-native/**"]
+    "nohoist": ["**/app",      "**/app/**" , "**/web",      "**/web/**"]
 },
 "private":true
 }
