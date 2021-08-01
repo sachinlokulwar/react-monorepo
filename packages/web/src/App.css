@@ -6,6 +6,20 @@
   height: 40vmin;
   pointer-events: none;
 }
+.page-header {
+  padding: 10px;
+  margin-top: 25px;
+}
+.header {
+  float: left;
+}
+.page-header-item {
+  display: inline-block;
+}
+.add-btn {
+  float: right;
+  line-height: 72px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
